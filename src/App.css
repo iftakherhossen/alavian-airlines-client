@@ -1,38 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
 .App {
-  text-align: center;
+    font-family: 'Merriweather', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    position: absolute;
+    z-index: 99;
+    padding: 0 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-hover {
+    border-bottom: 5px solid transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-hover:hover {
+    border-bottom: 5px solid #D3C19F;
 }
 
-.App-link {
-  color: #61dafb;
+.mb-12 {
+    margin-bottom: 12em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ms-6 {
+    margin-left: 6em;
+}
+
+.slider {
+    transition: 10s ease-in-out !important;
+}
+
+.font-1 {
+    font-size: 50px;
+}
+
+.bg-color-1 {
+    background-color: #D3C19F !important;
+}
+
+.bg-color-2 {
+    background-color: #AA3F44 !important;
+}
+
+.bg-color-3 {
+    background-color: #1E1F2D !important;
+}
+
+.font-color-1 {
+    color: #D3C19F !important;
+}
+
+.font-color-2 {
+    color: #AA3F44 !important;
+}
+
+.footer {
+    background-image: url(http://alavion.like-themes.com/wp-content/uploads/2018/02/footer-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 625px;
+    background-color: #1E1F2D;
+    color: white;
+    padding: 50px;
+}
+
+.footer-email {
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 25px 0 0 25px;
+    outline: 0;
+    width: 70%;
+}
+
+.footer-button {
+    padding: 15px 25px;
+    border: 0;
+    border-radius: 0 25px 25px 0;
+    outline: 0;
+}
+
+.w-40 {
+    width: 38%;
+}
+
+.w-60 {
+    width: 58%;
+}
+
+.w-35 {
+    width: 33%;
+}
+
+.w-65 {
+    width: 65%;
+}
+
+.fly-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.fly-up img {
+    width: 25px;
+}
+
+.fly-up:hover {
+    background-color: white !important;
+}
+
+.booking {
+    height: 850px;
+    background-color: #1E1F2D;
+    color: white;
+    padding: 50px;
+}
+
+.booking input, select {
+    width: 290px !important;
+}
+
+.br-15 {
+    border-radius: 15px;
+}
+
+.official-card {
+    background-image: url(http://alavion.like-themes.com/wp-content/uploads/2019/02/banner-bg.png?id=8473);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.notFound {
+    background-image: url(http://alavion.like-themes.com/wp-content/uploads/2018/02/404_image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 630px;
+}
+
+.aboutUs {
+    background-image: url(http://alavion.like-themes.com/wp-content/uploads/2019/02/testimonials-bg-1.png?id=8453);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    background-color: #1E1F2D;
+    color: white;
+    padding: 50px;
+}
+
+.user-pic {
+    width: 80px;
+    border-radius: 100%;
+    margin: 10px 0 20px;
+}
+
+.emptyLegs {
+    height: 1300px;
+    color: black;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.emptyLegs-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.w-30 {
+    width: 28%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.empty-font {
+    font-size: 12px !important;
+}
+
+.btn-hover:hover {
+    background-color: #1E1F2D !important;
+    color: #D3C19F !important;
+}
+
+.pic-wrapper {
+    height: 650px;
+    padding: 120px 0;
+    position: relative;
+}
+
+.pic-1 {
+    background-image: url(http://alavion.like-themes.com/wp-content/uploads/2019/02/special-bg.png?id=8463);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+
+.pic-2 {
+    background-image: url(http://alavion.like-themes.com/wp-content/uploads/2019/02/special-map.png?id=8464);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1E1F2D;
+    height: 450px;
+    border-radius: 0 10px 10px 0;
+}
+
+.text-whitesmoke {
+    color: rgb(221, 218, 218);
+}
+
+.link-hover:hover {
+    color: #1E1F2D
+}
+
+.after-image {
+    position: absolute;
+    width: 350px;
+    left: 23em;
+    top: 5em;
+}
+
+.side-image {
+    position: absolute;
+    left: 58.5em;
+    top: 8em;
+}
+
+.text-wrapper {
+    position: absolute;
+    top: 12em;
+    left: 44em;
+    width: 320px;
+}
+
+.half-rounded {
+    border-radius: 5px 25px 50px 5px;
+}
+
+.blog {
+    height: 700px;
+    padding: 50px;
+}
+
+.article-hover:hover {
+    color: #D3C19F !important;
+}
+
+.zoom-animation-wrapper {
+    overflow: hidden;
+}
+.zoom-animation {
+    transition: 0.5s all ease-in-out;
+}
+.zoom-animation-wrapper:hover .zoom-animation {
+    transform: scale(1.1);
 }
