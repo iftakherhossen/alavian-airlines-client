@@ -5,10 +5,19 @@ import { Container, FloatingLabel, Form, Tab, Tabs, Button } from 'react-bootstr
 
 const Booking = () => {
     const rightArrow = <FontAwesomeIcon icon={faArrowRight} />;
+    const handleSubmit = () => {
+    //     if () {
+    //         confirm('I assure all the information is correct?');
+    //         alert('Your form is under processing, our manager will contact you soon!');
+    //     }
+    //     else {
+    //         alert('Fill all the information')
+    //     }
+    }
 
     return (
-        <div className="booking">
-            <div className="mt-5">
+        <div id="booking" className="booking">
+            <div className="mt-4">
                 <Container>
                     <h4 className="font-color-1">Get your flight</h4>
                     <h2>Online request for flight!</h2>
@@ -66,7 +75,7 @@ const Booking = () => {
                                         <small>* After sending request our manager will contact you for more details about charter.</small>
                                     </p>
                                     <div className="d-flex justify-content-center mt-5 pt-1">
-                                        <Button type="button" className="border-0 bg-color-1 rounded-pill py-3 px-5">SUBMIT</Button>
+                                        <Button type="button" className="border-0 bg-color-1 rounded-pill py-3 px-5" onClick={handleSubmit}>SUBMIT</Button>
                                     </div>
                                 </Tab>
                                 <Tab eventKey="one-way" title="One Way" className="bg-light p-4 text-black br-15">
@@ -117,7 +126,7 @@ const Booking = () => {
                                         <small>* After sending request our manager will contact you for more details about charter.</small>
                                     </p>
                                     <div className="d-flex justify-content-center mt-5 pt-1">
-                                        <Button type="button" className="border-0 bg-color-1 rounded-pill py-3 px-5">SUBMIT</Button>
+                                        <Button type="button" className="border-0 bg-color-1 rounded-pill py-3 px-5" onClick={handleSubmit}>SUBMIT</Button>
                                     </div>
                                 </Tab>
                                 <Tab eventKey="transit" title="Transit Flight" className="bg-light p-4 text-black br-15">
@@ -168,7 +177,7 @@ const Booking = () => {
                                         <small>* After sending request our manager will contact you for more details about charter.</small>
                                     </p>
                                     <div className="d-flex justify-content-center mt-5 pt-1">
-                                        <Button type="button" className="border-0 bg-color-1 rounded-pill py-3 px-5">SUBMIT</Button>
+                                        <Button type="button" className="border-0 bg-color-1 rounded-pill py-3 px-5" onClick={handleSubmit}>SUBMIT</Button>
                                     </div>
                                 </Tab>
                             </Tabs>

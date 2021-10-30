@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -15,8 +16,8 @@ const Banner = () => {
                         <h1 className="font-1">PRIVATE JET CHARTERS</h1>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         <div className="d-flex justify-content-center">
-                            <button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-1">BOOK NOW</button>
-                            <button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-2">READ MORE</button>
+                            <Link to="/home#booking"><button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-1">BOOK NOW</button></Link>
+                            <Link to="/home#blog"><button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-2">READ MORE</button></Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -30,8 +31,8 @@ const Banner = () => {
                         <h1 className="font-1">BOOK YOUR FLIGHT</h1>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         <div className="d-flex justify-content-center">
-                            <button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-1">BOOK NOW</button>
-                            <button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-2">READ MORE</button>
+                            <Link to="/home#booking"><button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-1">BOOK NOW</button></Link>
+                            <Link to="/home#blog"><button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-2">READ MORE</button></Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -45,8 +46,8 @@ const Banner = () => {
                         <h1 className="font-1">COMFORTABLE TRANSFERS</h1>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         <div className="d-flex justify-content-center">
-                            <button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-1">BOOK NOW</button>
-                            <button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-2">READ MORE</button>
+                            <Link to="/home#booking"><button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-1">BOOK NOW</button></Link>
+                            <Link to="/home#blog"><button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-2">READ MORE</button></Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -60,8 +61,8 @@ const Banner = () => {
                         <h1 className="font-1">LUXERY JET FLIGHTS</h1>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         <div className="d-flex justify-content-center">
-                            <button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-1">BOOK NOW</button>
-                            <button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-2">READ MORE</button>
+                            <Link to="/home#booking"><button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-1">BOOK NOW</button></Link>
+                            <Link to="/home#blog"><button className="px-4 py-3 mx-2 rounded-pill border-0 bg-color-2">READ MORE</button></Link>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>

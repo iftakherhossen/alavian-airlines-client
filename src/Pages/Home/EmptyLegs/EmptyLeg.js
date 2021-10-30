@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card, Col, ListGroup, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const EmptyLeg = ({ detail }) => {
-    const { from, to, date, departure, arrival, sits, price } = detail;
+    const { _id, from, to, date, departure, arrival, sits, price } = detail;
 
     return (
         <div>
@@ -19,7 +20,7 @@ const EmptyLeg = ({ detail }) => {
                                 <ListGroup.Item>Price $ {price}</ListGroup.Item>
                             </ListGroup>
                             <div className="d-flex justify-content-center">
-                                <Button className="px-4 py-3 mx-2 mt-3 rounded-pill border-0 bg-color-2 empty-font btn-hover">BOOK NOW</Button>
+                                <Link to={`/recentFlights/${_id}`}><Button className="px-4 py-2 mx-2 mt-3 rounded-pill border-1 border-color-2 bg-color-2 empty-font btn-hover">BOOK NOW</Button></Link>
                             </div>
                         </Card.Text>
                     </Card.Body>

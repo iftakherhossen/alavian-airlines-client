@@ -35,7 +35,7 @@ const Home = () => {
 
 
             {/* GO TOP Button */}
-            {showButton && (<Button className="fly-up bg-color-1 border-0 rounded-circle p-4 d-flex flex-column" title="Fly High" onClick={flyHigh}>
+            {showButton && (<Button className="fly-up bg-color-1 border-0 rounded-circle p-3 d-flex flex-column" title="Fly High" onClick={flyHigh}>
                 <img src="https://i.ibb.co/zFPcBPn/go-top.png" alt="fly High" />
             </Button>)}
         </div>

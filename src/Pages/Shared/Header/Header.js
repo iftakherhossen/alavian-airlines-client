@@ -55,13 +55,13 @@ const Header = () => {
             <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand to="/home">
-                        <img
+                        <Link to="/home"><img
                             src="https://i.ibb.co/HgXxY2z/logo.png"
                             width="150"
                             height="50"
                             className="d-inline-block align-top me-5"
                             alt="Alavia Airlines Logo"
-                        />
+                        /></Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -80,7 +80,7 @@ const Header = () => {
                                     <Dropdown.Item as={Link} to="/manageAllFlights">Manage All Flights</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown> :
-                                <h5 className="font-color-1 ms-3 py-2 px-3">Hello &nbsp; {userIcon}</h5>}
+                                <h5 className="text-white ms-3 py-2 px-3">Hello &nbsp; {userIcon}</h5>}
                             {user.email ?
                                 <Button className="btn bg-color-2 text-white-grey border-0 px-3 py-0 ms-3" onClick={logOut}>{google} &nbsp; Log out</Button>
                                 :

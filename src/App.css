@@ -17,16 +17,24 @@
     border-bottom: 5px solid #D3C19F;
 }
 
+.mb-8 {
+    margin-bottom: 8em;
+}
+
 .mb-12 {
     margin-bottom: 12em;
 }
 
 .ms-6 {
-    margin-left: 6em;
+    margin-left: 2em;
 }
 
 .slider {
     transition: 10s ease-in-out !important;
+}
+
+.font-0 {
+    font-size: 80px;
 }
 
 .font-1 {
@@ -39,6 +47,9 @@
 
 .bg-color-2 {
     background-color: #AA3F44 !important;
+}
+.border-color-2 {
+    border-color: #AA3F44 !important;
 }
 
 .bg-color-3 {
@@ -188,7 +199,8 @@
 
 .btn-hover:hover {
     background-color: #1E1F2D !important;
-    color: #D3C19F !important;
+    border-color: #1E1F2D !important;
+    color: white !important;
 }
 
 .pic-wrapper {
@@ -257,9 +269,34 @@
 .zoom-animation-wrapper {
     overflow: hidden;
 }
+
 .zoom-animation {
     transition: 0.5s all ease-in-out;
 }
+
 .zoom-animation-wrapper:hover .zoom-animation {
     transform: scale(1.1);
+}
+
+.myFlights {
+    background-color: #1E1F2D;
+    height: 700px;
+    padding: 110px 50px 80px;
+}
+
+.w-5 {
+    width: 5%;
+}
+.w-95 {
+    width: 94%;
+}
+.deleteIcon {
+    cursor: pointer;
+    color: red;
+}
+.table-font {
+    font-size: 22px !important;
+}
+.pt-50 {
+    padding-top: 11em !important;
 }

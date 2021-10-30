@@ -7,13 +7,13 @@ const EmptyLegs = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch('/emptyLeg.json')
+        fetch('http://localhost:5000/emptyLegs')
             .then(res => res.json())
             .then(data => setDetails(data))
     }, [])
 
     return (
-        <div className="emptyLegs">
+        <div id="recentFlights" className="emptyLegs">
             <img src="https://i.ibb.co/yyWhtkG/plane-large.png" alt="plane" className="ms-5 ps-5 mx-auto w-100 pb-5 overflow-x-hidden animate__animated animate__fadeInRight" />
             <div className="emptyLegs-wrapper mt-3">
                 <div className="w-30 pt-5 ps-5">
