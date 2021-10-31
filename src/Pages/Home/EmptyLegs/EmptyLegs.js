@@ -25,7 +25,7 @@ const EmptyLegs = () => {
                 <Row xs={1} md={2} lg={3} className="g-4 me-5 py-3">
                     {
                         details.map(detail => <EmptyLeg
-                            key={details.key}
+                            key={detail._id}
                             detail={detail}
                         ></EmptyLeg>)
                     }

@@ -24,11 +24,11 @@ const RecentFlight = () => {
                     <Card.Title className="fs-3">{details.from} <small>to</small> {details.to}</Card.Title>
                     <hr/>
                     <Card.Text>
-                        Date {details.date} <br />
-                        Departure {details.departure} <br />
-                        Arrival {details.arrival} <br />
-                        Empty Sits {details.sits} <br />
-                        Price {details.price} <br />
+                        Date - {details.date} <br />
+                        Departure - {details.departure} <br />
+                        Arrival - {details.arrival} <br />
+                        Empty Sits - {details.sits} <br />
+                        Price - {details.price} <br />
                     </Card.Text>
                     <Button onClick={handleBookNow} className="px-4 py-2 mx-2 mt-3 rounded-pill border-1 border-color-2 bg-color-2 empty-font btn-hover">BOOK NOW</Button>
                 </Card.Body>

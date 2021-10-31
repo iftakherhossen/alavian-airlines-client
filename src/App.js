@@ -9,7 +9,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import './App.css';
 import NotFound from './Pages/NotFound/NotFound';
 import MyFlights from './Pages/MyFlights/MyFlights';
-import PrivateRoute from './Pages/Home/Login/PrivateRoute/PrivateRoute';
+import PrivateRoute from './Pages/Home/PrivateRoute/PrivateRoute';
 import RecentFlight from './Pages/Home/Recent Flights/RecentFlight';
 
 function App() {

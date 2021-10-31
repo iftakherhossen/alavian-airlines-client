@@ -21,7 +21,7 @@ const Blog = () => {
                 <Row sm={1} md={2} lg={3} className="g-4 pt-3 pb-5">
                     {
                         articles.map(article => <Article
-                            key={articles.key}
+                            key={article._id}
                             article={article}
                         ></Article>)
                     }
