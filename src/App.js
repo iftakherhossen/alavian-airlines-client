@@ -9,6 +9,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import './App.css';
 import NotFound from './Pages/NotFound/NotFound';
 import MyFlights from './Pages/MyFlights/MyFlights';
+import Bookings from './Pages/MyFlights/Bookings';
+import ManageAllFlights from './Pages/ManageAllFlights/ManageAllFlights';
 
 function App() {
   return (
@@ -22,8 +24,14 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          <Route path="/myBookings">
+            <Bookings></Bookings>
+          </Route>
           <Route path="/myFlights">
             <MyFlights></MyFlights>
+          </Route>
+          <Route path="/manageAllFlights">
+            <ManageAllFlights></ManageAllFlights>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

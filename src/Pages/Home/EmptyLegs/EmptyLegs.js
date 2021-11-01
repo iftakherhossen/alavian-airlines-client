@@ -20,7 +20,6 @@ const EmptyLegs = () => {
 
     const [cart, setCart] = useCart(details);
     
-    console.log(details)
     const handleAddToCart = flight => {
         const exists = cart.find(ft => ft._id === flight._id);
         let newCart = [];
