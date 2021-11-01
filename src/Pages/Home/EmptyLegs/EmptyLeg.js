@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, Col, ListGroup, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-const EmptyLeg = ({ detail }) => {
-    const { _id, from, to, date, departure, arrival, sits, price } = detail;
+const EmptyLeg = (props) => {
+    const { from, to, date, departure, arrival, sits, price } = props.detail;
 
     return (
         <div>
@@ -20,7 +19,7 @@ const EmptyLeg = ({ detail }) => {
                                 <ListGroup.Item>Price $ {price}</ListGroup.Item>
                             </ListGroup>
                             <div className="d-flex justify-content-center">
-                                <Link to={`/recentFlights/${_id}`}><Button className="px-4 py-2 mx-2 mt-3 rounded-pill border-1 border-color-2 bg-color-2 empty-font btn-hover">BOOK NOW</Button></Link>
+                                <Button className="px-4 py-2 mx-2 mt-3 rounded-pill border-1 border-color-2 bg-color-2 empty-font btn-hover" onClick={() => props.handleAddToCart(props.detail)}>BOOK NOW</Button>
                             </div>
                         </Card.Text>
                     </Card.Body>

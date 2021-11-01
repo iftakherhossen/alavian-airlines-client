@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar, Button, Dropdown, } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { useEffect, useState } from "react";
-import initializeAuthentication from '../../../Firebase/Firebase.initialize';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from '@firebase/auth';
 import { HashLink } from 'react-router-hash-link';
-
+import initializeAuthentication from '../../../Firebase/Firebase.initialize';
+import MyFlights from '../../MyFlights/MyFlights';
 
 initializeAuthentication();
 
@@ -67,8 +66,7 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-5">
                             <Nav.Link as={Link} to="/home" className="text-white nav-hover">HOME</Nav.Link>
-                            <Nav.Link as={HashLink} to="/home#booking" className="text-white nav-hover">BOOKING</Nav.Link>
-                            <Nav.Link as={HashLink} to="/home#recentFlights" className="text-white nav-hover">RECENT &nbsp;FLIGHTS</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#booking" className="text-white nav-hover">Booking</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#blog" className="text-white nav-hover">BLOG</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#about-us" className="text-white nav-hover">ABOUT US</Nav.Link>
                         </Nav>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import AboutUs from '../AboutUs/AboutUs';
-import Booking from '../Booking/Booking';
 import EmptyLegs from '../EmptyLegs/EmptyLegs';
 import OfferCounter from '../OfferCounter/OfferCounter';
 import Blog from '../Blog/Blog';
@@ -27,7 +26,6 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Booking></Booking>
             <EmptyLegs></EmptyLegs>
             <Blog></Blog>
             <AboutUs></AboutUs>
