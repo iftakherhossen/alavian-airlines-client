@@ -7,7 +7,7 @@ const ManageAllFlights = () => {
     const [allFlightsData, setAllFlightsData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking')
+        fetch('https://aqueous-scrubland-00954.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => {
                 setAllFlights(data)

@@ -14,7 +14,7 @@ const ManageFlights = ({ allFlights }) => {
 
     const handleDelete = id => {
         console.log('deleted triggard', id)
-        const url = `http://localhost:5000/booking/${id}`
+        const url = `https://aqueous-scrubland-00954.herokuapp.com/booking/${id}`
         fetch(url, {
             method: 'DELETE'
         })

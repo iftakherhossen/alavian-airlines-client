@@ -5,7 +5,6 @@ import useCart from '../../hooks/useCart';
 import Flights from './Flights';
 import useFlights from '../../hooks/useFlights'
 import { getStoredCart, clearTheCart, removeFromDb } from '../../utilities/fakedb';
-import { useHistory } from 'react-router';
 
 const Bookings = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -16,7 +15,7 @@ const Bookings = () => {
         const savedCart = getStoredCart();
         data.order = savedCart;
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://aqueous-scrubland-00954.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

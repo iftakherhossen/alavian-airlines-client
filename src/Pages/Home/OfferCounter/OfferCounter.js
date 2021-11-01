@@ -12,7 +12,7 @@ const OfferCounter = () => {
                 <div className="d-flex pic-wrapper">
                     <div className="w-50 pic-1">
                     </div>
-                    <img src="http://alavion.like-themes.com/wp-content/uploads/2019/02/special-pilot.png" alt="pilot" className="after-image" />
+                    <img src="https://i.ibb.co/RQGwFs4/pilot.png" alt="pilot" className="after-image" />
                     <div className="w-50 pic-2">
                         <div className="text-wrapper">
                             <h5 className="font-color-1">Special Offer</h5>
@@ -20,7 +20,7 @@ const OfferCounter = () => {
                             <Button className="px-4 py-3 bg-color-2 border-0 half-rounded mt-3">READ MORE &nbsp; &nbsp; {rightArrow}</Button>
                         </div>
                         <div>
-                            <img src="http://alavion.like-themes.com/wp-content/uploads/2019/02/airplane-shape.png" alt="plane" className="side-image" />
+                            <img src="https://i.ibb.co/GtKBfwb/plane.png" alt="plane" className="side-image" />
                         </div>
                     </div>
                 </div>

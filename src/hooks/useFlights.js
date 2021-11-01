@@ -4,7 +4,7 @@ const useFlights = () => {
     const [details, setDetails] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/emptyLegs')
+        fetch('https://aqueous-scrubland-00954.herokuapp.com/emptyLegs')
             .then(res => res.json())
             .then(data => setDetails(data));
     }, []);
