@@ -1,53 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Nav, Navbar, Button, Dropdown, } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from '@firebase/auth';
 import { HashLink } from 'react-router-hash-link';
-import initializeAuthentication from '../../../Firebase/Firebase.initialize';
-import MyFlights from '../../MyFlights/MyFlights';
-
-initializeAuthentication();
+import useAuth from '../../../hooks/useAuth'
 
 const Header = () => {
     const google = <FontAwesomeIcon icon={faGoogle} />;
     const userIcon = <FontAwesomeIcon icon={faUser} />
 
-    const [user, setUser] = useState({});
-
-    const auth = getAuth();
-    const googleProvider = new GoogleAuthProvider();
-
-    const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
-                console.log(result.user);
-            })
-    }
-
-    const logOut = () => {
-        signOut(auth)
-            .then(() => {
-                setUser({});
-            })
-    }
-
-    // observe user state change
-    useEffect(() => {
-        const unsubscribed = onAuthStateChanged(auth, user => {
-            if (user) {
-                setUser(user);
-            }
-            else {
-                setUser({});
-            }
-        });
-        return () => unsubscribed;
-    }, [auth]);
+    const { user, signInUsingGoogle, logOut } = useAuth();
 
     return (
         <div className="header">

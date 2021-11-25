@@ -11,34 +11,37 @@ import NotFound from './Pages/NotFound/NotFound';
 import MyFlights from './Pages/MyFlights/MyFlights';
 import Bookings from './Pages/MyFlights/Bookings';
 import ManageAllFlights from './Pages/ManageAllFlights/ManageAllFlights';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/myBookings">
-            <Bookings></Bookings>
-          </Route>
-          <Route path="/myFlights">
-            <MyFlights></MyFlights>
-          </Route>
-          <Route path="/manageAllFlights">
-            <ManageAllFlights></ManageAllFlights>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/myBookings">
+              <Bookings></Bookings>
+            </Route>
+            <Route path="/myFlights">
+              <MyFlights></MyFlights>
+            </Route>
+            <Route path="/manageAllFlights">
+              <ManageAllFlights></ManageAllFlights>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

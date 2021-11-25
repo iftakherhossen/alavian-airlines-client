@@ -13,7 +13,7 @@ const ManageFlights = ({ allFlights }) => {
     const mailIcon = <FontAwesomeIcon icon={faEnvelope} />
 
     const handleDelete = id => {
-        console.log('deleted triggard', id)
+        console.log('deleted triggerd', id)
         const url = `https://aqueous-scrubland-00954.herokuapp.com/booking/${id}`
         fetch(url, {
             method: 'DELETE'
