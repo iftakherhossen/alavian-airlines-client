@@ -11,7 +11,7 @@ const MyFlights = () => {
     const deleteIcon = <FontAwesomeIcon icon={faTrashAlt} />;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/booking/${user.email}`)
+        fetch(`https://aqueous-scrubland-00954.herokuapp.com/booking/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyFlights(data)
