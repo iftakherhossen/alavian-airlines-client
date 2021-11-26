@@ -47,7 +47,7 @@ const ManageAllFlights = () => {
                 <div className="mt-5">
                     <div className="d-flex flex-column text-white">
                         <div className="d-flex px-2 mb-2">
-                            <h2>Manage All Tickets - {allFlights.length}</h2>
+                            <h3>All Tickets - {allFlights.length}</h3>
                         </div>
 
                         <Table className="text-white">
@@ -69,7 +69,7 @@ const ManageAllFlights = () => {
                                             <td>{allFlights.email}</td>
                                             <td>{allFlights.flightDetails.from} - {allFlights.flightDetails.to}</td>
                                             <td>{allFlights.flightDetails.date}</td>
-                                            <td>{allFlights.flightDetails.price}</td>
+                                            <td>$ {allFlights.flightDetails.price}</td>
                                             <td className="text-end">
                                                 <span
                                                     className="deleteIcon"

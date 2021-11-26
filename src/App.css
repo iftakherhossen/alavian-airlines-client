@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+
 .App {
     font-family: 'Merriweather', serif;
 }
@@ -281,7 +282,7 @@
 
 .myFlights {
     background-color: #1E1F2D;
-    height: 1000px;
+    height: 700px;
     padding: 110px 50px 80px;
 }
 

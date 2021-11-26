@@ -2,6 +2,7 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../hooks/useAuth';
 
 const MyFlights = () => {
@@ -47,7 +48,7 @@ const MyFlights = () => {
                 <div className="mt-5">
                     <div className="d-flex flex-column text-white">
                         <div className="d-flex px-2 mb-2">
-                            <h5>Manage Your Tickets - {myFlights.length}</h5>
+                            <h5>Your Tickets - {myFlights.length}</h5>
                         </div>
 
                         <Table className="text-white">
@@ -69,7 +70,7 @@ const MyFlights = () => {
                                             <td>{myFlights.email}</td>
                                             <td>{myFlights.flightDetails.from} - {myFlights.flightDetails.to}</td>
                                             <td>{myFlights.flightDetails.date}</td>
-                                            <td>${myFlights.flightDetails.price}</td>
+                                            <td>$ {myFlights.flightDetails.price}</td>
                                             <td className="text-end">
                                                 <span
                                                     className="deleteIcon"
@@ -83,6 +84,8 @@ const MyFlights = () => {
                                 }
                             </tbody>
                         </Table>
+
+                        {myFlights.length === 0 ? <p className="text-center mt-5">Book more <HashLink to="/home#booking" className="text-decoration-none font-color-1">Flights</HashLink></p>: <p className="text-center mt-5">Book your tickets from <HashLink to="/home#booking" className="text-decoration-none font-color-1">Alavian Airlines</HashLink> for safe and reasonable price!</p>}
                     </div>
                 </div>
             </Container>
