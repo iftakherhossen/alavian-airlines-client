@@ -39,7 +39,6 @@ const Header = () => {
                             {user.email ? <Dropdown>
                                 <Dropdown.Toggle id="dropdown-basic" className="btn bg-color-1 text-black border-0 px-3 py-2"><span className="fw-bold">{user?.displayName}</span> &nbsp;</Dropdown.Toggle>
                                 <Dropdown.Menu>
-                                    <Dropdown.Item as={Link} to="/myBookings">My Bookings</Dropdown.Item>
                                     <Dropdown.Item as={Link} to="/myFlights">My Flights</Dropdown.Item>
                                     <Dropdown.Item as={Link} to="/manageAllFlights">Manage All Flights</Dropdown.Item>
                                 </Dropdown.Menu>

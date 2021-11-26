@@ -1,7 +1,42 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useState } from 'react';
+import { Container, Table } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
 
 const MyFlights = () => {
+    const [myFlights, setMyFlights] = useState([]);
+    const { user } = useAuth();
+    const deleteIcon = <FontAwesomeIcon icon={faTrashAlt} />;
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/booking/${user.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setMyFlights(data)
+            });
+    }, [user.email])
+
+    const handleDelete = id => {
+        const url = `https://aqueous-scrubland-00954.herokuapp.com/booking/${id}`
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                const confirm = window.confirm('Are you sure? You wanna delete it!')
+
+                if (confirm === true) {
+                    if (data.deletedCount) {
+                        alert('Deleted Successfully!')
+                        const remaining = myFlights.filter(detail => detail._id !== id);
+                        setMyFlights(remaining)
+                    }
+                }
+            })
+    }
+
     return (
         <div className="myFlights">
             <Container>
@@ -11,10 +46,43 @@ const MyFlights = () => {
                 </div>
                 <div className="mt-5">
                     <div className="d-flex flex-column text-white">
-                        <div className="d-flex px-2">
-                            <div className="w-95 fs-5">Manage Your Tickets</div>
-                            <div className="w-5"></div>
+                        <div className="d-flex px-2 mb-2">
+                            <h5>Manage Your Tickets - {myFlights.length}</h5>
                         </div>
+
+                        <Table className="text-white">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Destination</th>
+                                    <th>Date</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    myFlights.map(myFlights => (
+                                        <tr>
+                                            <td>{myFlights.name}</td>
+                                            <td>{myFlights.email}</td>
+                                            <td>{myFlights.flightDetails.from} - {myFlights.flightDetails.to}</td>
+                                            <td>{myFlights.flightDetails.date}</td>
+                                            <td>${myFlights.flightDetails.price}</td>
+                                            <td className="text-end">
+                                                <span
+                                                    className="deleteIcon"
+                                                    onClick={() => handleDelete(myFlights._id)}
+                                                >
+                                                    {deleteIcon}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </Table>
                     </div>
                 </div>
             </Container>

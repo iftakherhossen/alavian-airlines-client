@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Col, ListGroup, Button } from 'react-bootstrap';
+import BookingModal from './BookingModal';
 
-const EmptyLeg = (props) => {
-    const { from, to, date, departure, arrival, sits, price } = props.detail;
+const EmptyLeg = ({details, setBookingSuccess}) => {
+    const { from, to, date, departure, arrival, sits, price } = details;
+
+    const [openModal, setOpenModal] = useState(false);
+    const handleModalOpen = () => setOpenModal(true);
+    const handleModalClose = () => setOpenModal(false);
 
     return (
         <div>
@@ -19,12 +24,18 @@ const EmptyLeg = (props) => {
                                 <ListGroup.Item>Price $ {price}</ListGroup.Item>
                             </ListGroup>
                             <div className="d-flex justify-content-center">
-                                <Button className="px-4 py-2 mx-2 mt-3 rounded-pill border-1 border-color-2 bg-color-2 empty-font btn-hover" onClick={() => props.handleAddToCart(props.detail)}>BOOK NOW</Button>
+                                <Button className="px-4 py-2 mx-2 mt-3 rounded-pill border-1 border-color-2 bg-color-2 empty-font btn-hover" onClick={handleModalOpen}>BOOK NOW</Button>
                             </div>
                         </Card.Text>
                     </Card.Body>
                 </Card>
             </Col>
+            <BookingModal
+                details={details}
+                openModal={openModal}
+                handleModalClose={handleModalClose}
+                setBookingSuccess={setBookingSuccess}
+            ></BookingModal>
         </div>
     );
 };
